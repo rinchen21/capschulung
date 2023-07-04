@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Logout</title>
+    <script>
+        function logout() {
+            // Hier ersetzen Sie die Werte durch die tatsächlichen Werte
+            const xsuaaInstanceName = 'risk-management-auth';
+            const region = 'eu10.hana.ondemand.com';
+            const clientId = 'sb-risk-management-CLD200-CF-B04-dev!t241713';
+            const redirectUri = encodeURIComponent('https://meine-anwendung.example.com/login'); // Ersetzen Sie dies durch Ihre tatsächliche Redirect-URL
+            const logoutUrl = `https://${xsuaaInstanceName}.authentication.${region}/logout?client_id=${clientId}&redirect_uri=${redirectUri}`;
+
+            // Weiterleitung zum Logout
+            window.location.href = logoutUrl;
+        }
+    </script>
+</head>
+<body onload="logout()">
+    <h1>Logout...</h1>
+    <p>Sie werden abgemeldet...</p>
+<script src="https://port35729-workspaces-ws-5528v.eu10.applicationstudio.cloud.sap/livereload.js?snipver=1&port=443" async="" defer=""></script></body>
+</html>

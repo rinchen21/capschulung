@@ -1,0 +1,19 @@
+
+{
+  "welcomeFile": "/app/risks/webapp/index.html",
+  "logout": {
+    "logoutEndpoint": "/logout",
+    "logoutPage": "/logout.html"
+  },
+  "routes": [
+    {
+      "source": "^/app/(.*)$",
+      "localDir": "./",
+      "target": "$1"
+    },
+    {
+      "source": "^/service/(.*)$",
+      "destination": "srv-api"
+    }
+  ]
+}
